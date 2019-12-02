@@ -1,0 +1,620 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+header:not(.landing_part) {
+  height: 300px;
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+header:not(.landing_part) h3 {
+  text-align: center;
+  margin-top: 100px;
+  color: #fff;
+  font-size: 40px;
+}
+header:not(.landing_part) nav {
+  height: 100px;
+  width: 100%;
+  padding: 10px 5%;
+  box-sizing: border-box;
+  position: fixed;
+}
+header:not(.landing_part) nav .left, header:not(.landing_part) nav .body-wrapper form .container .right, .body-wrapper form .container header:not(.landing_part) nav .right {
+  height: inherit;
+  width: auto;
+  float: left;
+}
+header:not(.landing_part) nav .left .logo-text, header:not(.landing_part) nav .body-wrapper form .container .right .logo-text, .body-wrapper form .container header:not(.landing_part) nav .right .logo-text {
+  font-size: 20px;
+  color: #fff;
+}
+header:not(.landing_part) nav .right {
+  height: inherit;
+  width: auto;
+  float: right;
+}
+header:not(.landing_part) nav .right a {
+  display: inline-block;
+  font-size: 17px;
+  color: #fff;
+  text-decoration: none;
+  height: auto;
+  width: auto;
+  margin-right: 50px;
+}
+header:not(.landing_part) nav .right a:hover {
+  color: #fff;
+}
+header:not(.landing_part) nav .right a:last-child {
+  margin-right: 0;
+}
+
+header.user-part {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Profile.jpg);
+}
+
+header.landing_part {
+  height: 100px;
+  width: 100%;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.2);
+}
+header.landing_part nav {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+header.landing_part nav .left, header.landing_part nav .body-wrapper form .container .right, .body-wrapper form .container header.landing_part nav .right {
+  height: inherit;
+  width: 250px;
+  float: left;
+}
+header.landing_part nav .left i.fa, header.landing_part nav .body-wrapper form .container .right i.fa, .body-wrapper form .container header.landing_part nav .right i.fa {
+  color: #8a36a8;
+  font-size: 45px;
+  float: left;
+  margin-right: 10px;
+}
+header.landing_part nav .left .logo-text, header.landing_part nav .body-wrapper form .container .right .logo-text, .body-wrapper form .container header.landing_part nav .right .logo-text {
+  font-size: 25px;
+  color: #8a36a8;
+  width: auto;
+  float: left;
+  margin-top: 5px;
+}
+header.landing_part nav .right {
+  height: inherit;
+  width: auto;
+  float: right;
+  padding-top: 5px;
+}
+header.landing_part nav .right a {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+  color: #575757;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+header.landing_part nav .right a:hover {
+  color: #fff;
+  background: #8a36a8;
+  transition: 0.1s ease-in;
+  border-radius: 3px;
+}
+header.landing_part nav .right a.last-child {
+  margin-right: 0;
+  background: #8a36a8;
+  color: #fff;
+  border-radius: 3px;
+}
+
+section.banner {
+  height: 500px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/Africa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+section.banner h3.heading {
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section.banner p {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+section.features {
+  height: auto;
+  width: 95%;
+  margin: 40px auto;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px 1%;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+section.features .links {
+  height: 100px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+section.features .links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #575757;
+  margin-right: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+section.features .links a:last-child {
+  margin-right: 0;
+}
+section.features .links a.active {
+  background: #8a36a8;
+  color: #fff;
+  border-radius: 25px;
+}
+section.features .links a:hover {
+  background: #8a36a8;
+  color: #fff;
+  border-radius: 25px;
+  transition: 0.1s ease-in;
+}
+section.features .two-facts, section.features .one-fact {
+  height: 300px;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+section.features .two-facts .col.no-bg, section.features .one-fact .col.no-bg {
+  background: none;
+  height: 450px;
+}
+section.features .two-facts .col, section.features .one-fact .col {
+  float: left;
+  width: 47%;
+  height: inherit;
+  padding: 30px 3%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+section.features .two-facts .col h5, section.features .one-fact .col h5 {
+  color: #fff;
+  text-align: center;
+}
+section.features .two-facts .col p, section.features .one-fact .col p {
+  text-align: center;
+  color: #fff;
+}
+section.features .two-facts .col .btn-container, section.features .one-fact .col .btn-container {
+  height: 35px;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+section.features .two-facts .col .btn-container button, section.features .one-fact .col .btn-container button {
+  height: inherit;
+  width: auto;
+  padding: 5px 30px;
+  box-sizing: border-box;
+  background: #d98525;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+}
+section.features .two-facts .col .btn-container button.btn_second, section.features .one-fact .col .btn-container button.btn_second {
+  background: #d92594;
+}
+section.features .two-facts .col:nth-child(2), section.features .one-fact .col:nth-child(2) {
+  float: right;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/polio.jpg);
+  background-position: center;
+}
+section.features .two-facts .col:nth-child(2).no-bg, section.features .one-fact .col:nth-child(2).no-bg {
+  background: none;
+}
+section.features .one-fact.no-bg {
+  background: none;
+  height: 450px;
+}
+section.features .one-fact {
+  height: 300px;
+  margin-top: 90px;
+  padding: 30px 3%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+section.features .one-fact h5 {
+  color: #fff;
+  text-align: center;
+}
+section.features .one-fact p {
+  text-align: center;
+  color: #fff;
+}
+section.features .one-fact .btn-container {
+  height: 35px;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+section.features .one-fact .btn-container button {
+  height: inherit;
+  width: auto;
+  padding: 5px 30px;
+  box-sizing: border-box;
+  background: #d98525;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+}
+section.features .one-fact .btn-container button.btn_second {
+  background: #f24822;
+}
+
+.body-wrapper {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  margin-top: 60px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 150px;
+  box-sizing: border-box;
+}
+.body-wrapper .avatar {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #575757;
+  background-image: url(../images/img_avatar.png);
+  background-size: contain;
+}
+.body-wrapper form.report-form {
+  height: 900px;
+}
+.body-wrapper form {
+  height: 350px;
+  width: 100%;
+  padding: 10px 3%;
+  box-sizing: border-box;
+}
+.body-wrapper form .container {
+  height: inherit;
+  width: 100%;
+}
+.body-wrapper form .container .left, .body-wrapper form .container .right {
+  height: auto;
+  width: 45%;
+  float: left;
+}
+.body-wrapper form .container .left h3, .body-wrapper form .container .right h3 {
+  font-size: 18px;
+  text-align: center;
+  color: #575757;
+}
+.body-wrapper form .container .left p, .body-wrapper form .container .right p {
+  color: #353536;
+}
+.body-wrapper form .container .left p a, .body-wrapper form .container .right p a {
+  color: #353536;
+  font-weight: bolder;
+}
+.body-wrapper form .container .left .input-container, .body-wrapper .wrapper form.login-form .container .left .btn-container, .wrapper .body-wrapper form.login-form .container .left .btn-container, .body-wrapper form .container .right .input-container, .body-wrapper .wrapper form.login-form .container .right .btn-container, .wrapper .body-wrapper form.login-form .container .right .btn-container {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.body-wrapper form .container .left .input-container .left, .body-wrapper .wrapper form.login-form .container .left .btn-container .left, .wrapper .body-wrapper form.login-form .container .left .btn-container .left, .body-wrapper form .container .right .input-container .left, .body-wrapper .wrapper form.login-form .container .right .btn-container .left, .wrapper .body-wrapper form.login-form .container .right .btn-container .left, .body-wrapper form .container .left .input-container .right, .body-wrapper .wrapper form.login-form .container .left .btn-container .right, .wrapper .body-wrapper form.login-form .container .left .btn-container .right, .body-wrapper form .container .right .input-container .right, .body-wrapper .wrapper form.login-form .container .right .btn-container .right, .wrapper .body-wrapper form.login-form .container .right .btn-container .right {
+  height: inherit;
+  width: auto;
+  margin-right: 5px;
+  float: left;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+.body-wrapper form .container .left .input-container .left i.fa, .body-wrapper .wrapper form.login-form .container .left .btn-container .left i.fa, .wrapper .body-wrapper form.login-form .container .left .btn-container .left i.fa, .body-wrapper form .container .right .input-container .left i.fa, .body-wrapper .wrapper form.login-form .container .right .btn-container .left i.fa, .wrapper .body-wrapper form.login-form .container .right .btn-container .left i.fa, .body-wrapper form .container .left .input-container .right i.fa, .body-wrapper .wrapper form.login-form .container .left .btn-container .right i.fa, .wrapper .body-wrapper form.login-form .container .left .btn-container .right i.fa, .body-wrapper form .container .right .input-container .right i.fa, .body-wrapper .wrapper form.login-form .container .right .btn-container .right i.fa, .wrapper .body-wrapper form.login-form .container .right .btn-container .right i.fa {
+  color: #575757;
+  font-size: 25px;
+}
+.body-wrapper form .container .left .input-container .right, .body-wrapper .wrapper form.login-form .container .left .btn-container .right, .wrapper .body-wrapper form.login-form .container .left .btn-container .right, .body-wrapper form .container .right .input-container .right, .body-wrapper .wrapper form.login-form .container .right .btn-container .right, .wrapper .body-wrapper form.login-form .container .right .btn-container .right {
+  height: inherit;
+  width: 88%;
+  float: right;
+}
+.body-wrapper form .container .left .input-container .right input, .body-wrapper form.paymentForm .container .left .input-container .right .full-col textarea, .body-wrapper form.paymentForm .container .full-col .left .input-container .right textarea, .body-wrapper .wrapper form.login-form .container .left .btn-container .right input, .body-wrapper .wrapper form.login-form form.paymentForm .container .left .btn-container .right .full-col textarea, form.paymentForm .body-wrapper .wrapper form.login-form .container .left .btn-container .right .full-col textarea, .body-wrapper .wrapper form.login-form form.paymentForm .container .full-col .left .btn-container .right textarea, form.paymentForm .body-wrapper .wrapper form.login-form .container .full-col .left .btn-container .right textarea, .wrapper .body-wrapper form.login-form .container .left .btn-container .right input, .wrapper .body-wrapper form.login-form form.paymentForm .container .left .btn-container .right .full-col textarea, form.paymentForm .wrapper .body-wrapper form.login-form .container .left .btn-container .right .full-col textarea, .wrapper .body-wrapper form.login-form form.paymentForm .container .full-col .left .btn-container .right textarea, form.paymentForm .wrapper .body-wrapper form.login-form .container .full-col .left .btn-container .right textarea, .body-wrapper form .container .right .input-container .right input, .body-wrapper form.paymentForm .container .right .input-container .right .full-col textarea, .body-wrapper form.paymentForm .container .full-col .right .input-container .right textarea, .body-wrapper .wrapper form.login-form .container .right .btn-container .right input, .body-wrapper .wrapper form.login-form form.paymentForm .container .right .btn-container .right .full-col textarea, form.paymentForm .body-wrapper .wrapper form.login-form .container .right .btn-container .right .full-col textarea, .body-wrapper .wrapper form.login-form form.paymentForm .container .full-col .right .btn-container .right textarea, form.paymentForm .body-wrapper .wrapper form.login-form .container .full-col .right .btn-container .right textarea, .wrapper .body-wrapper form.login-form .container .right .btn-container .right input, .wrapper .body-wrapper form.login-form form.paymentForm .container .right .btn-container .right .full-col textarea, form.paymentForm .wrapper .body-wrapper form.login-form .container .right .btn-container .right .full-col textarea, .wrapper .body-wrapper form.login-form form.paymentForm .container .full-col .right .btn-container .right textarea, form.paymentForm .wrapper .body-wrapper form.login-form .container .full-col .right .btn-container .right textarea, .body-wrapper form .container .left .input-container .right select, .body-wrapper .wrapper form.login-form .container .left .btn-container .right select, .wrapper .body-wrapper form.login-form .container .left .btn-container .right select, .body-wrapper form .container .right .input-container .right select, .body-wrapper .wrapper form.login-form .container .right .btn-container .right select, .wrapper .body-wrapper form.login-form .container .right .btn-container .right select {
+  height: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #575757;
+  font-size: 14px;
+  color: #575757;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+  background: transparent;
+}
+.body-wrapper form .container .left .input-container .right input:focus, .body-wrapper form.paymentForm .container .left .input-container .right .full-col textarea:focus, .body-wrapper form.paymentForm .container .full-col .left .input-container .right textarea:focus, .body-wrapper .wrapper form.login-form .container .left .btn-container .right input:focus, .body-wrapper .wrapper form.login-form form.paymentForm .container .left .btn-container .right .full-col textarea:focus, form.paymentForm .body-wrapper .wrapper form.login-form .container .left .btn-container .right .full-col textarea:focus, .body-wrapper .wrapper form.login-form form.paymentForm .container .full-col .left .btn-container .right textarea:focus, form.paymentForm .body-wrapper .wrapper form.login-form .container .full-col .left .btn-container .right textarea:focus, .wrapper .body-wrapper form.login-form .container .left .btn-container .right input:focus, .wrapper .body-wrapper form.login-form form.paymentForm .container .left .btn-container .right .full-col textarea:focus, form.paymentForm .wrapper .body-wrapper form.login-form .container .left .btn-container .right .full-col textarea:focus, .wrapper .body-wrapper form.login-form form.paymentForm .container .full-col .left .btn-container .right textarea:focus, form.paymentForm .wrapper .body-wrapper form.login-form .container .full-col .left .btn-container .right textarea:focus, .body-wrapper form .container .right .input-container .right input:focus, .body-wrapper form.paymentForm .container .right .input-container .right .full-col textarea:focus, .body-wrapper form.paymentForm .container .full-col .right .input-container .right textarea:focus, .body-wrapper .wrapper form.login-form .container .right .btn-container .right input:focus, .body-wrapper .wrapper form.login-form form.paymentForm .container .right .btn-container .right .full-col textarea:focus, form.paymentForm .body-wrapper .wrapper form.login-form .container .right .btn-container .right .full-col textarea:focus, .body-wrapper .wrapper form.login-form form.paymentForm .container .full-col .right .btn-container .right textarea:focus, form.paymentForm .body-wrapper .wrapper form.login-form .container .full-col .right .btn-container .right textarea:focus, .wrapper .body-wrapper form.login-form .container .right .btn-container .right input:focus, .wrapper .body-wrapper form.login-form form.paymentForm .container .right .btn-container .right .full-col textarea:focus, form.paymentForm .wrapper .body-wrapper form.login-form .container .right .btn-container .right .full-col textarea:focus, .wrapper .body-wrapper form.login-form form.paymentForm .container .full-col .right .btn-container .right textarea:focus, form.paymentForm .wrapper .body-wrapper form.login-form .container .full-col .right .btn-container .right textarea:focus, .body-wrapper form .container .left .input-container .right select:focus, .body-wrapper .wrapper form.login-form .container .left .btn-container .right select:focus, .wrapper .body-wrapper form.login-form .container .left .btn-container .right select:focus, .body-wrapper form .container .right .input-container .right select:focus, .body-wrapper .wrapper form.login-form .container .right .btn-container .right select:focus, .wrapper .body-wrapper form.login-form .container .right .btn-container .right select:focus {
+  border: none;
+  border-bottom: 1px solid #575757;
+}
+.body-wrapper form .container .right {
+  float: right;
+}
+.body-wrapper form .btn-container {
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+}
+.body-wrapper form .btn-container button {
+  height: inherit;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  background-image: linear-gradient(to top right, #bc8ed1, #853da6);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.wrapper {
+  height: auto;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Africa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.wrapper .header {
+  display: block;
+  height: 150px;
+  width: 26%;
+  margin: 0 auto;
+  background: #8a36a8;
+  z-index: 10;
+  position: absolute;
+  left: 37%;
+  border-radius: 5px;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.6);
+}
+.wrapper .header .cap-container {
+  height: 20px;
+  width: 45px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.wrapper .header .cap-container i.fa {
+  color: #fff;
+  font-size: 40px;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+}
+.wrapper .header .text {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 30px;
+}
+.wrapper form.login-form {
+  height: auto;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: #fff;
+  z-index: 9;
+  border-radius: 5px;
+  padding: 10px 4%;
+  padding-top: 150px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.wrapper form.login-form h3 {
+  font-size: 18px;
+  text-align: center;
+  color: #575757;
+}
+.wrapper form.login-form p {
+  color: #353536;
+}
+.wrapper form.login-form p a {
+  color: #353536;
+  font-weight: bolder;
+}
+.wrapper form.login-form .input-container, .wrapper form.login-form .btn-container {
+  height: 30px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.wrapper form.login-form .input-container .left, .wrapper form.login-form .btn-container .left, .wrapper .body-wrapper form.login-form .input-container .container .right, .wrapper .body-wrapper form.login-form .btn-container .container .right, .body-wrapper .wrapper form.login-form .input-container .container .right, .body-wrapper .wrapper form.login-form .btn-container .container .right, .wrapper .body-wrapper form.login-form .container .input-container .right, .wrapper .body-wrapper form.login-form .container .btn-container .right, .body-wrapper .wrapper form.login-form .container .input-container .right, .body-wrapper .wrapper form.login-form .container .btn-container .right {
+  height: inherit;
+  width: auto;
+  margin-right: 5px;
+  float: left;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+.wrapper form.login-form .input-container .left i.fa, .wrapper form.login-form .btn-container .left i.fa, .wrapper .body-wrapper form.login-form .input-container .container .right i.fa, .wrapper .body-wrapper form.login-form .btn-container .container .right i.fa, .body-wrapper .wrapper form.login-form .input-container .container .right i.fa, .body-wrapper .wrapper form.login-form .btn-container .container .right i.fa, .wrapper .body-wrapper form.login-form .container .input-container .right i.fa, .wrapper .body-wrapper form.login-form .container .btn-container .right i.fa, .body-wrapper .wrapper form.login-form .container .input-container .right i.fa, .body-wrapper .wrapper form.login-form .container .btn-container .right i.fa {
+  color: #575757;
+  font-size: 25px;
+}
+.wrapper form.login-form .input-container .right, .wrapper form.login-form .btn-container .right {
+  height: inherit;
+  width: 88%;
+  float: right;
+}
+.wrapper form.login-form .input-container .right input, .wrapper form.login-form .input-container .right form.paymentForm .container .full-col textarea, form.paymentForm .container .full-col .wrapper form.login-form .input-container .right textarea, .wrapper form.login-form .input-container .right form.paymentForm .container .col-2 select, form.paymentForm .container .col-2 .wrapper form.login-form .input-container .right select, .wrapper form.login-form .input-container .right form.paymentForm .container .col select, form.paymentForm .container .col .wrapper form.login-form .input-container .right select, .wrapper form.login-form .btn-container .right input, .wrapper form.login-form .btn-container .right form.paymentForm .container .full-col textarea, form.paymentForm .container .full-col .wrapper form.login-form .btn-container .right textarea, .wrapper form.login-form .btn-container .right form.paymentForm .container .col-2 select, form.paymentForm .container .col-2 .wrapper form.login-form .btn-container .right select, .wrapper form.login-form .btn-container .right form.paymentForm .container .col select, form.paymentForm .container .col .wrapper form.login-form .btn-container .right select {
+  height: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #575757;
+  font-size: 14px;
+  color: #575757;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+}
+.wrapper form.login-form .input-container .right input:focus, .wrapper form.login-form .input-container .right form.paymentForm .container .full-col textarea:focus, form.paymentForm .container .full-col .wrapper form.login-form .input-container .right textarea:focus, .wrapper form.login-form .input-container .right form.paymentForm .container .col-2 select:focus, form.paymentForm .container .col-2 .wrapper form.login-form .input-container .right select:focus, .wrapper form.login-form .input-container .right form.paymentForm .container .col select:focus, form.paymentForm .container .col .wrapper form.login-form .input-container .right select:focus, .wrapper form.login-form .btn-container .right input:focus, .wrapper form.login-form .btn-container .right form.paymentForm .container .full-col textarea:focus, form.paymentForm .container .full-col .wrapper form.login-form .btn-container .right textarea:focus, .wrapper form.login-form .btn-container .right form.paymentForm .container .col-2 select:focus, form.paymentForm .container .col-2 .wrapper form.login-form .btn-container .right select:focus, .wrapper form.login-form .btn-container .right form.paymentForm .container .col select:focus, form.paymentForm .container .col .wrapper form.login-form .btn-container .right select:focus {
+  border: none;
+  border-bottom: 1px solid #575757;
+}
+.wrapper form.login-form .btn-container {
+  height: 60px;
+}
+.wrapper form.login-form .btn-container button {
+  height: inherit;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  background-image: linear-gradient(to top right, #bc8ed1, #853da6);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+form.paymentForm.volunteerForm {
+  height: 600px;
+}
+
+form.paymentForm {
+  height: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+form.paymentForm h5.thanks {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+form.paymentForm .container.longer {
+  height: 200px;
+}
+form.paymentForm .container {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+form.paymentForm .container .col {
+  height: inherit;
+  width: 32%;
+  float: left;
+  position: relative;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 0;
+}
+form.paymentForm .container .col input, form.paymentForm .container .col .full-col textarea, form.paymentForm .container .full-col .col textarea, form.paymentForm .container .col select {
+  height: inherit;
+  width: 100%;
+  display: block;
+  border: none;
+  box-shadow: none;
+  padding: 10px 5%;
+  box-sizing: border-box;
+}
+form.paymentForm .container .col select {
+  background: none;
+}
+form.paymentForm .container .col:nth-child(1) {
+  margin-right: 2%;
+}
+form.paymentForm .container .col:last-child {
+  margin-right: 0;
+  float: right;
+}
+form.paymentForm .container .col-2 {
+  height: inherit;
+  width: 48%;
+  max-width: 48%;
+  float: left;
+  position: relative;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 0;
+}
+form.paymentForm .container .col-2 input, form.paymentForm .container .col-2 .full-col textarea, form.paymentForm .container .full-col .col-2 textarea, form.paymentForm .container .col-2 select {
+  height: inherit;
+  width: 100%;
+  display: block;
+  border: none;
+  box-shadow: none;
+  padding: 10px 5%;
+  box-sizing: border-box;
+}
+form.paymentForm .container .col-2 select {
+  background: none;
+}
+form.paymentForm .container .col-2:nth-child(2) {
+  float: right;
+}
+form.paymentForm .container .full-col {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 0;
+}
+form.paymentForm .container .full-col input, form.paymentForm .container .full-col textarea, form.paymentForm .container .full-col .col select, form.paymentForm .container .col .full-col select, form.paymentForm .container .full-col .col-2 select, form.paymentForm .container .col-2 .full-col select {
+  height: inherit;
+  width: 100%;
+  display: block;
+  border: none;
+  box-shadow: none;
+  padding: 10px 5%;
+  box-sizing: border-box;
+}
+form.paymentForm .container .full-col textarea {
+  height: 200px;
+  padding: 20px 2%;
+}
+form.paymentForm .container .btn-ctn {
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+}
+form.paymentForm .container .btn-ctn button {
+  height: inherit;
+  width: 200px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,137 @@
+<html>
+    <head></head>
+    <title>Back To School | All State Charts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <body>
+        <header class="shifted landing_part">
+            <nav>
+                <div class="left">
+                    <i class="fa fa-graduation-cap"></i>
+                    <div class="logo-text">Back To School</div>
+                </div>
+                <div class="right">
+                    <a href="/">Home</a>
+                    <a href="/user/profile">Profile</a>
+                    <a href="/user/report">Report A Case</a>
+                    <a href="/user/logout" class="last-child">Sign Out</a>
+                </div>
+            </nav>
+        </header>
+        <section class="banner">
+            <h3 class="heading">A real time monitoring system</h3>
+            <p>For Getting Kids back to School</p>
+        </section>
+        <section class="features">
+            <div class="links">
+                <a href="/">Facts</a>
+                <a href="/charts" class="active">Charts</a>
+                <a href="/donations">Donations</a>
+                <a href="/volunteer">Volunteers</a>
+                <a href="/rooms">Chat Rooms</a>
+            </div>
+
+            <div id="northCentralChartContainer" style="width: 100%;height: 300px;margin-bottom: 20px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2562" class="active">Benue Statistics</a>
+                <a href="/state/2577">Kogi Statistics</a>
+                <a href="/state/2578">Kwara Statistics</a>
+                <a href="/state/2580">Nassarawa Statistics</a>
+                <a href="/state/2581">Niger Statistics</a>
+                <a href="/state/2586">Plateau Statistics</a>
+                <a href="/state/2556">FCT Statistics</a>
+            </div>
+            <hr>
+
+            <div id="northEastChartContainer" style="width: 100%;height: 300px;margin-bottom: 70px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2557" class="active">Adamawa Statistics</a>
+                <a href="/state/2560">Bauchi Statistics</a>
+                <a href="/state/2563">Borno Statistics</a>
+                <a href="/state/2570">Gombe Statistics</a>
+                <a href="/state/2589">Taraba Statistics</a>
+                <a href="/state/2590">Yobe Statistics</a>
+            </div>
+            <hr>
+
+            <div id="northWestChartContainer" style="width: 100%;height: 300px;margin-bottom: 70px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2572" class="active">Jigawa Statistics</a>
+                <a href="/state/2573">Kaduna Statistics</a>
+                <a href="/state/2574">Kano Statistics</a>
+                <a href="/state/2575">Katsina Statistics</a>
+                <a href="/state/2576">Kebbi Statistics</a>
+                <a href="/state/2588">Sokoto Statistics</a>
+                <a href="/state/2591">Zamfara Statistics</a>
+            </div>
+            <hr>
+
+            <div id="southEastChartContainer" style="width: 100%;height: 300px;margin-bottom: 70px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2555" class="active">Abia Statistics</a>
+                <a href="/state/2559">Anambra Statistics</a>
+                <a href="/state/2566">Ebonyi Statistics</a>
+                <a href="/state/2569">Enugu Statistics</a>
+                <a href="/state/2571">Imo Statistics</a>
+            </div>
+            <hr>
+
+            <div id="southSouthChartContainer" style="width: 100%;height: 300px;margin-bottom: 70px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2558" class="active">Akwa Ibom Statistics</a>
+                <a href="/state/2561">Bayelsa Statistics</a>
+                <a href="/state/2564">Cross River Statistics</a>
+                <a href="/state/2565">Delta Statistics</a>
+                <a href="/state/2567">Edo Statistics</a>
+                <a href="/state/2587">Rivers Statistics</a>
+            </div>
+            <hr>
+
+            <div id="southWestChartContainer" style="width: 100%;height: 300px;margin-bottom: 70px;">
+
+            </div>
+            <div class="links" style="margin-bottom: 40px;">
+                <a href="/state/2568" class="active">Ekiti Statistics</a>
+                <a href="/state/2579">Lagos Statistics</a>
+                <a href="/state/2582">Ogun Statistics</a>
+                <a href="/state/2583">Ondo Statistics</a>
+                <a href="/state/2584">Osun Statistics</a>
+                <a href="/state/2585">Oyo Statistics</a>
+            </div>
+            <hr>
+            <div class="one-fact no-bg">
+                <div id="causesChartContainer"></div>
+            </div>
+            <hr>
+            <div class="one-fact no-bg">
+                <div id="ageRangeChartContainer"></div>
+            </div>
+            <hr>
+            <div class="one-fact no-bg">
+                <div id="genderChartContainer"></div>
+            </div>
+        </section>
+
+        <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/5.0.0/pusher.min.js"></script> -->
+        <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

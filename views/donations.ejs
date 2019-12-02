@@ -1,0 +1,168 @@
+<html>
+    <head></head>
+    <title>Back To School | Making Donations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <body>
+        <header class="shifted landing_part">
+            <nav>
+                <div class="left">
+                    <i class="fa fa-graduation-cap"></i>
+                    <div class="logo-text">Back To School</div>
+                </div>
+                <div class="right">
+                    <a href="/">Home</a>
+                    <a href="/user/profile">Profile</a>
+                    <a href="/user/report">Report A Case</a>
+                    <a href="/user/logout" class="last-child">Sign Out</a>
+                </div>
+            </nav>
+        </header>
+        <section class="banner">
+            <h3 class="heading">A real time monitoring system</h3>
+            <p>For Getting Kids back to School</p>
+        </section>
+        <section class="features">
+            <div class="links">
+                <a href="/">Facts</a>
+                <a href="/charts">Charts</a>
+                <a href="/donations" class="active">Donations</a>
+                <a href="/volunteer">Volunteer</a>
+                <a href="/rooms">Chat Rooms</a>
+            </div>
+            <form class="paymentForm" action="" method="post">
+
+                <h5 class="thanks" style="font-weight: bolder;">Over 10 million Nigeria children are out of school, donate now to help these children and get them back to school!</h5>
+                <h5 class="thanks error"></h5>
+                <div class="container">
+                    <div class="col">
+                        <input type="text" id="name" name="name" value="" placeholder="Enter Your Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="amount" name="amount" value="" placeholder="Enter Amount You Would like to donate">
+                    </div>
+                    <div class="col">
+                        <select class="" name="cause" id="cause">
+                            <option value="">Select Cause Of For Donation</option>
+                            <option value="Natural Disasters">Natural Disasters</option>
+                            <option value="Gender Discrimination">Gender Discrimination</option>
+                            <option value="Armed Conflict">Armed Conflict</option>
+                            <option value="Language Challenges">Language Challenges</option>
+                            <option value="Household Poverty">Household Poverty</option>
+                            <option value="Child Labour">Child Labour</option>
+                            <option value="Child Marriage">Child Marriage</option>
+                            <option value="Illnesses">Illnesses</option>
+                            <option value="Disabilites">Disabilites</option>
+                            <option value="Low number of schools">Low number of schools</option>
+                            <option value="Lack of qualified teachers">Lack of qualified teachers</option>
+                            <option value="Lack of school materials">Lack of school materials</option>
+                            <option value="Religious beliefs">Religious beliefs</option>
+                            <option value="Absence from school">Absence from school</option>
+                            <option value="Distance from school">Distance from school</option>
+                            <option value="All">Every and Any Cause</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <h5 class="thanks">One more thing... We would appreciate if you could be specific</h5> -->
+                <div class="container">
+                    <div class="col-2">
+                        <select class="state_of_origin" name="states" id="state_of_origin">
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select class="" name="local_government" id="local_government">
+                            <option value="">Select Local Government</option>
+                        </select>
+                    </div>
+                </div>
+                <script src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+                <div class="btn-ctn" style="margin: 0 auto;height: 60px;width: 200px;">
+                    <button style="width:200px;height: 60px;background-image: linear-gradient(to top right, #bc8ed1, #853da6);color: #fff;box-shadow: none;border: none;">Pay Now</button>
+                </div>
+            </form>
+        </section>
+
+        <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/5.0.0/pusher.min.js"></script> -->
+        <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+        <script src="/js/main.js"></script>
+
+        <script>
+            const API_publicKey = "FLWPUBK-49878f71e3a92620280f553139088ef2-X";
+
+            $("form.paymentForm").submit(function(e){
+                e.preventDefault()
+                $("h5.thanks.error").text("")
+                if($("#name").val() == ''){
+                    $("h5.thanks.error").text("Please provide your name").css({'color':'red','transition':'.2s ease-in'})
+                }else if($("#amount").val() == '' || isNaN($("#amount").val()) || Number($("#amount").val()) < 100){
+                    $("h5.thanks.error").text("Please provide any amount from 100.00 Naira upwards").css({'color':'red','transition':'.2s ease-in'})
+                }else if($("#cause").val() == ''){
+                    $("h5.thanks.error").text("Please provide a description of your donation").css({'color':'red','transition':'.2s ease-in'})
+                }else{
+                    payWithRave()
+                }
+            })
+            function payWithRave() {
+                var x = getpaidSetup({
+                    PBFPubKey: API_publicKey,
+                    customer_email: "user@example.com",
+                    amount: $("#amount").val(),
+                    customer_phone: "234099940409",
+                    currency: "NGN",
+                    txref: "rave-123456",
+                    meta: [{
+                        metaname: "flightID",
+                        metavalue: "AP1234"
+                    }],
+                    onclose: function() {},
+                    callback: function(response) {
+                        // var txref = response.tx.txRef; // collect txRef returned and pass to a 					server page to complete status check.
+                        // console.log("This is the response returned after a charge", response);
+                        console.log(response)
+                        if(response.data.data.responsecode == "00"){
+                        	  console.log("yeah")
+                            fetch("http://localhost:3000/api/saveDonation",{
+                                method: "post",
+                                body: JSON.stringify({
+                                    name: $("#name").val(),
+                                    amount: $("#amount").val(),
+                                    cause: $("#cause").val(),
+                                    state: $("#state_of_origin").val(),
+                                    local_government: $("#local_government").val(),
+                                    txref: response.tx.txRef,
+                                }),
+                                headers: new Headers(({
+                                    'Content-Type': 'application/json'
+                                }))
+                            })
+                            .then(data => data.json())
+                            .then(data => {
+                                if(data.success){
+                                    $("body").css({'pointer-events':'none'})
+                                    $("h5.thanks.error").text(data.message).css({'color':'green','transition':'.2s ease-in'})
+                                    setTimeout(function(){
+                                        window.location.assign("http://localhost:3000/donations")
+                                    },5000)
+                                }else{
+                                    $("h5.thanks.error").text(data.message).css({'color':'red','transition':'.2s ease-in'})
+                                }
+                            })
+                        }else{
+                          	console.log("Nah!")
+                        }
+                        x.close(); // use this to close the modal immediately after payment.
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

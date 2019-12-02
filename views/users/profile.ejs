@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Back To School | User Profile Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <header class="shifted user-part">
+            <nav>
+                <div class="left">
+                    <div class="logo-text">Back To School</div>
+                </div>
+                <div class="right">
+                    <a href="/">Home</a>
+                    <a href="/user/profile">Profile</a>
+                    <a href="/user/report">Report A Case</a>
+                    <a href="/user/logout">Sign Out</a>
+                </div>
+            </nav>
+            <h3>Your Profile</h3>
+        </header>
+        <div class="body-wrapper">
+            <div class="avatar"></div>
+              <form action="/user/profile" method="post">
+                <div class="container">
+                    <div class="left">
+                        <h3>Update Your Profile Here</h3>
+
+                        <% if(errors.email_or_phone != null) {%>
+                            <small style="text-align:center;color:red;font-size: 15px;text-align: left;"><%= errors.email_or_phone %></small>
+                        <% } %>
+
+                        <% if(errors.full_name != null) {%>
+                            <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.full_name.message %></small>
+                        <% } %>
+
+                        <% if(locals.message){ %>
+                            <small style="text-align:center;color:green;font-size: 15px;text-align: center;"><%=message.success%></small>
+                        <% } %>
+                        <% if(locals.message){ %>
+                            <small style="text-align:center;color:red;font-size: 15px;text-align: center;"><%=message.error%></small>
+                        <% } %>
+
+                        <div class="input-container">
+                          <div class="left">
+                            <i class="fa fa-user"></i>
+                          </div>
+                          <div class="right">
+                            <input type="text" name="full_name" placeholder="Enter Your Full Name" value="<% if(request.full_name != null){%><%= request.full_name %><%}else{%><%= user_details.full_name %><%}%>">
+                          </div>
+                        </div>
+
+                        <% if(errors.email_address != null) {%>
+                            <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.email_address.message %></small>
+                        <% } %>
+
+                        <div class="input-container">
+                          <div class="left">
+                            <i class="fa fa-envelope"></i>
+                          </div>
+                          <div class="right">
+                            <input type="text" name="email_address" placeholder="Enter Your Email Address" value="<% if(request.email_address != null){%><%= request.email_address %><%}else{%><%= user_details.email_address %><%}%>">
+                          </div>
+                        </div>
+
+                        <% if(errors.phone_number != null) {%>
+                            <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.phone_number.message %></small>
+                        <% } %>
+
+                        <div class="input-container">
+                          <div class="left">
+                            <i class="fa fa-phone"></i>
+                          </div>
+                          <div class="right">
+                            <input type="text" name="phone_number" placeholder="Enter Your Phone Number" value="<% if(request.phone_number != null){%><%= request.phone_number %><%}else{%><%= user_details.phone_number %><%}%>">
+                          </div>
+                        </div>
+
+                        <% if(errors.password != null) {%>
+                            <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.password.message %></small>
+                        <% } %>
+                        <!--
+                        <div class="input-container">
+                          <div class="left">
+                            <i class="fa fa-unlock-alt"></i>
+                          </div>
+                          <div class="right">
+                            <input type="password" name="password" placeholder="Enter Your Password" value="">
+                          </div>
+                        </div>
+                      -->
+                      </div>
+                      <div class="right">
+                          <h3>Other Details</h3>
+
+                          <% if(errors.nationality != null) {%>
+                              <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.nationality.message %></small>
+                          <% } %>
+
+                          <div class="input-container">
+                            <div class="left">
+                              <i class="fa fa-flag"></i>
+                            </div>
+                            <div class="right">
+                                <select class="" name="nationality" id="nationality">
+                                    <option value="">Select Nationality</option>
+                                </select>
+                                <input type="hidden" id="nationality_val" value="<% if(request.nationality != null){%><%= request.nationality %><%}else{%><%= user_details.nationality %><%}%>">
+                            </div>
+                          </div>
+
+                          <% if(errors.state_of_origin != null) {%>
+                              <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.state_of_origin.message %></small>
+                          <% } %>
+
+                          <div class="input-container">
+                            <div class="left">
+                              <i class="fa fa-globe"></i>
+                            </div>
+                            <div class="right">
+                                <select class="" name="state_of_origin" id="states">
+                                    <option value="">Select State Of Origin</option>
+                                </select>
+                                <input type="hidden" id="state_of_origin_val" value="<% if(request.state_of_origin != null){%><%= request.state_of_origin %><%}else{%><%= user_details.state_of_origin %><%}%>">
+                            </div>
+                          </div>
+
+                          <% if(errors.occupation != null) {%>
+                              <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.occupation.message %></small>
+                          <% } %>
+
+                          <div class="input-container">
+                            <div class="left">
+                              <i class="fa fa-user-md"></i>
+                            </div>
+                            <div class="right">
+                              <input type="text" name="occupation" placeholder="Enter Your Occupation" value="<% if(request.occupation != null){%><%= request.occupation %><%}else{%><%= user_details.occupation %><%}%>">
+                            </div>
+                          </div>
+
+                          <% if(errors.password != null) {%>
+                              <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.password.message %></small>
+                          <% } %>
+                          <!--
+                          <div class="input-container">
+                            <div class="left">
+                              <i class="fa fa-unlock-alt"></i>
+                            </div>
+                            <div class="right">
+                              <input type="password" name="password" placeholder="Enter Your Password" value="">
+                            </div>
+                          </div>
+                        -->
+                      </div>
+                  </div>
+
+                  <div class="btn-container">
+                    <button name="button">Update Profile</button>
+                  </div>
+              </form>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

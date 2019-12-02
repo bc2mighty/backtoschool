@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <title>Back To School | User Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="cap-container">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <div class="text">Back To School Login</div>
+            </div>
+            <form action="/admin/login" method="post" class="login-form">
+                <h3>Admin Login Page</h3>
+                <% if(locals.message){ %>
+                    <small style="text-align:center;color:green;font-size: 15px;text-align: center;"><%=message.success%></small>
+                <% } %>
+                <% if(locals.message){ %>
+                    <small style="text-align:center;color:red;font-size: 15px;text-align: center;"><%=message.error%></small>
+                <% } %>
+
+                <% if(errors.email_or_phone) {%>
+                    <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.email_or_phone %></small>
+                <% } %>
+
+                <% if(errors.email_address != null) {%>
+                    <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.email_address.message %></small>
+                <% } %>
+                <div class="input-container">
+                    <div class="left">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="email_address" placeholder="Enter Your Email Address" value="<%= request.email_address != null ? request.email_address : '' %>">
+                    </div>
+                </div>
+
+                <% if(errors.password != null) {%>
+                    <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.password.message %></small>
+                <% } %>
+
+                <div class="input-container">
+                    <div class="left">
+                        <i class="fa fa-unlock-alt"></i>
+                    </div>
+                    <div class="right">
+                        <input type="password" name="password" placeholder="Enter Your Password" value="">
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button name="button">Sign In</button>
+                </div>
+                <p>Don't have an account yet? <a href="/user/register">Sign Up</a></p>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

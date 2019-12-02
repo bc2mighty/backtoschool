@@ -1,0 +1,120 @@
+<html>
+    <head></head>
+    <title>Back To School | Making Donations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <body>
+        <header class="shifted landing_part">
+            <nav>
+                <div class="left">
+                    <i class="fa fa-graduation-cap"></i>
+                    <div class="logo-text">Back To School</div>
+                </div>
+                <div class="right">
+                    <a href="/">Home</a>
+                    <a href="/user/profile">Profile</a>
+                    <a href="/user/report">Report A Case</a>
+                    <a href="/user/logout" class="last-child">Sign Out</a>
+                </div>
+            </nav>
+        </header>
+        <section class="banner">
+            <h3 class="heading">A real time monitoring system</h3>
+            <p>For Getting Kids back to School</p>
+        </section>
+        <section class="features">
+            <div class="links">
+                <a href="/">Facts</a>
+                <a href="/charts">Charts</a>
+                <a href="/donations">Donations</a>
+                <a href="/volunteer" class="active">Volunteer</a>
+                <a href="/rooms">Chat Rooms</a>
+            </div>
+            <form class="volunteerForm paymentForm" action="" method="post">
+
+                <% if(locals.message){ %>
+                    <small style="text-align:center;color:green;font-size: 15px;text-align: center;"><%=message.success%></small>
+                <% } %>
+                <% if(locals.message){ %>
+                    <small style="text-align:center;color:red;font-size: 15px;text-align: center;"><%=message.error%></small>
+                <% } %>
+
+                <h5 class="thanks" style="font-weight: bolder;">Over 10 million Nigeria children are out of school, volunteer now to help these children and get them back to school!</h5>
+                <h5 class="thanks error"></h5>
+                <div class="container">
+                    <div class="col">
+                        <input type="text" id="name" name="name" value="<%= request.name != null ? request.name : '' %>" placeholder="Enter Your Name">
+                    </div>
+                    <% if(errors.name != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.name.message %></small>
+                    <% } %>
+                    <div class="col">
+                        <input type="text" id="occupation" name="occupation" value="<%= request.occupation != null ? request.occupation : '' %>" placeholder="Enter Your occupation">
+                    </div>
+                    <% if(errors.occupation != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.occupation.message %></small>
+                    <% } %>
+                    <div class="col">
+                        <input type="text" id="experience_number" name="experience_number" value="<%= request.experience != null ? request.experience : '' %>" placeholder="Number of years of experience">
+                    </div>
+                    <% if(errors.experience_number != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.experience_number.message %></small>
+                    <% } %>
+                </div>
+                <!-- <h5 class="thanks">One more thing... We would appreciate if you could be specific</h5> -->
+                <div class="container">
+                    <div class="col-2">
+                        <input type="email" name="email_address" id="email_address" value="<%= request.email_address != null ? request.email_address : '' %>" placeholder="Enter Your Email Address">
+                    </div>
+                    <% if(errors.email_address != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.email_address.message %></small>
+                    <% } %>
+                    <div class="col-2">
+                      <input type="text" name="phone_number"  id="phone_number" value="<%= request.phone_number != null ? request.phone_number : '' %>" placeholder="Enter Your Phone Number">
+                    </div>
+                    <% if(errors.phone_number != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.phone_number.message %></small>
+                    <% } %>
+                </div>
+                <!-- <h5 class="thanks">One more thing... We would appreciate if you could be specific</h5> -->
+                <div class="container longer">
+                    <div class="full-col">
+                        <textarea name="about" id="about" rows="8" cols="80" placeholder="Tell us about yourself..."><%= request.about != null ? request.about : '' %></textarea>
+                    </div>
+                    <% if(errors.about != null) {%>
+                        <small style="text-align:center;color:red;font-size: 12px;text-align: left;"><%= errors.about.message %></small>
+                    <% } %>
+                </div>
+                <div class="btn-ctn" style="margin: 0 auto;height: 60px;width: 200px;">
+                    <button style="width:200px;height: 60px;background-image: linear-gradient(to top right, #bc8ed1, #853da6);color: #fff;box-shadow: none;border: none;">Volunteer</button>
+                </div>
+            </form>
+        </section>
+
+        <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/5.0.0/pusher.min.js"></script> -->
+        <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+        <script src="/js/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("form.volunteerForm").submit(function(e){
+                    $("h5.thanks.error").text("")
+                    var inputs = $(this).find("input, select, textarea")
+                    $.each(inputs, function(key, input){
+                        if($(this).val() == ""){
+                            $("h5.thanks.error").text("Please provide " + $(this).attr('id').replace("_", " ") + " field").css({'color':'red','transition':'.2s ease-in'})
+                            e.preventDefault()
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

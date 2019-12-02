@@ -1,0 +1,12 @@
+#ide
+node_modules
+.idea
+.vscode
+
+# others
+test.js
+coverage
+npm-debug.log
+.coveralls.yml
+*.log
+*.0x
